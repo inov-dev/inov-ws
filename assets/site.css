@@ -11,7 +11,7 @@ html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:1
   --text-heading-2: 2.8rem;
   --text-heading-3: 2.2rem;
   --text-heading-4: 1.8rem;
-  --text-menu: 1.6rem;
+  --text-menu: 2rem;
 }
 
 body { line-height: 1.6; }
@@ -28,8 +28,12 @@ main .entry-content h2 { margin-top: 1.5em; margin-bottom: .65em; }
 main .entry-content h3 { margin-top: 1.25em; margin-bottom: .6em; }
 
 header[role="banner"] nav .menu > li > a,
-header[role="banner"] nav div > ul > li > ul a,
 header[role="banner"] .menu-toggle { font-size: var(--text-menu); line-height: 1.45; }
+header[role="banner"] nav div > ul > li > ul a { font-size: 1.7rem; line-height: 1.45; }
+header[role="banner"] .design-varea-top-nav .menu > li > a {
+  padding-top: .65em;
+  padding-bottom: .65em;
+}
 header[role="banner"] .logomore-motto { font-size: var(--text-small); line-height: 1.45; }
 .breadcrumb a, .breadcrumb li:before { font-size: var(--text-small); }
 .btn, .wpcf7 form input[type="submit"] { font-size: var(--text-body); line-height: 1.4; }
@@ -46,7 +50,11 @@ main .area-home-visual-1 .card-page figcaption .dw-fake-h2 { font-size: 2rem; }
 .design-varea-bottom-4 li, .design-varea-bottom-4 .copyright { font-size: var(--text-small); line-height: 1.55; }
 .design-varea-bottom-4 nav h2 { font-size: var(--text-heading-4); }
 
+@media screen and (max-width: 1199px) {
+  :root { --text-menu: 1.8rem; }
+}
+
 @media screen and (max-width: 767px) {
-  :root { --text-heading-1: 3rem; --text-heading-2: 2.4rem; --text-heading-3: 2rem; --text-menu: 1.7rem; }
+  :root { --text-heading-1: 3rem; --text-heading-2: 2.4rem; --text-heading-3: 2rem; }
   main .entry-content { line-height: 1.6; }
 }
