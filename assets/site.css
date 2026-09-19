@@ -58,3 +58,73 @@ main .area-home-visual-1 .card-page figcaption .dw-fake-h2 { font-size: 2rem; }
   :root { --text-heading-1: 3rem; --text-heading-2: 2.4rem; --text-heading-3: 2rem; }
   main .entry-content { line-height: 1.6; }
 }
+
+
+/*
+ * Compact Venus Diffusion access help.
+ */
+
+.results-access-help {
+	position: relative;
+	margin-top: 8px;
+	font-size: 13px;
+	text-align: center;
+}
+
+.results-access-help summary {
+	color: #417fb8;
+	font-weight: 700;
+	cursor: pointer;
+	list-style: none;
+}
+
+.results-access-help summary::-webkit-details-marker {
+	display: none;
+}
+
+.results-access-help summary::after {
+	content: " +";
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.results-access-help[open] summary::after {
+	content: " −";
+}
+
+.results-access-help summary:focus-visible {
+	outline: 2px solid #417fb8;
+	outline-offset: 3px;
+}
+
+.results-access-content {
+	width: 280px;
+	max-width: calc(100vw - 30px);
+	margin: 8px auto 0;
+	padding: 12px 14px;
+	border: 1px solid #d8e2ea;
+	border-radius: 6px;
+	background: #ffffff;
+	box-shadow: 0 5px 14px rgba(32, 57, 78, 0.14);
+	color: #404042;
+	font-weight: 400;
+	line-height: 1.45;
+	text-align: left;
+}
+
+.results-access-content p {
+	margin: 0 0 8px;
+}
+
+.results-access-content p:last-child {
+	margin-bottom: 0;
+}
+
+.results-access-contact {
+	font-weight: 700;
+	text-align: center;
+}
+
+.results-access-contact a {
+	color: #417fb8;
+}
