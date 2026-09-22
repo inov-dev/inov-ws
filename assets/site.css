@@ -299,6 +299,7 @@ header[role="banner"] .mssante-menu-item.is-open .mssante-menu-tooltip {
     display: block;
   }
 }
+
 /* Keep the primary navigation readable and in the page flow on phones. */
 @media screen and (max-width: 767px) {
   header[role="banner"] .design-varea-top-nav {
