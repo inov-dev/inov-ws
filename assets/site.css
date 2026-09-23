@@ -308,6 +308,17 @@ header[role="banner"] .logo .dw-media {
 }
 
 /* Keep the primary navigation readable and in the page flow on phones. */
+@media screen and (min-width: 768px) {
+  header[role="banner"] .design-varea-top-nav.is-sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(24, 42, 58, .16);
+  }
+}
+
 @media screen and (max-width: 767px) {
   header[role="banner"] .design-varea-top-nav {
     position: relative;
