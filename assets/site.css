@@ -306,3 +306,109 @@ header[role="banner"] .logo .dw-media {
 	max-width: 100%;
 	height: auto;
 }
+
+/* Keep the primary navigation readable and in the page flow on phones. */
+@media screen and (min-width: 768px) {
+  header[role="banner"] .design-varea-top-nav.is-sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(24, 42, 58, .16);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header[role="banner"] .design-varea-top-nav {
+    position: relative;
+    z-index: 20;
+    background: #fff;
+  }
+
+  header[role="banner"] nav.main-navigation {
+    width: 100%;
+    padding: 0 1.5rem;
+    background: #fff;
+  }
+
+  header[role="banner"] nav.main-navigation h2 {
+    display: block;
+    margin: 0;
+  }
+
+  header[role="banner"] nav.main-navigation .menu-toggle {
+    display: block;
+    width: 100%;
+    padding: 1.2rem 0;
+    color: #245b83;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+
+  header[role="banner"] nav.main-navigation .menu-navigation-principale-container {
+    display: none;
+  }
+
+  header[role="banner"] nav.main-navigation.toggled
+  .menu-navigation-principale-container {
+    display: block;
+    max-height: 70vh;
+    max-height: 70dvh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  header[role="banner"] nav.main-navigation ul.menu,
+  header[role="banner"] nav.main-navigation ul.sub-menu {
+    position: static;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #fff;
+    box-shadow: none;
+    list-style: none;
+    text-align: left;
+  }
+
+  header[role="banner"] nav.main-navigation ul.menu li,
+  header[role="banner"] nav.main-navigation ul.sub-menu li {
+    position: static;
+    display: block;
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  header[role="banner"] nav.main-navigation ul.menu a,
+  header[role="banner"] nav.main-navigation ul.sub-menu a {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 1rem .5rem;
+    color: #245b83;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+  }
+
+  header[role="banner"] nav.main-navigation ul.menu > li {
+    border-top: 1px solid #d8e2ea;
+  }
+
+  header[role="banner"] nav.main-navigation ul.sub-menu {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header[role="banner"] nav.main-navigation ul.sub-menu a {
+    padding: .65rem .5rem .65rem 2rem;
+    font-size: 1.45rem;
+  }
+}

@@ -44,3 +44,41 @@
     }
   });
 }());
+(function () {
+  var nav = document.querySelector('#masthead .design-varea-top-nav');
+  if (!nav) {
+    return;
+  }
+
+  var desktop = window.matchMedia('(min-width: 768px)');
+  var spacer = document.createElement('div');
+  spacer.className = 'sticky-nav-spacer';
+  nav.parentNode.insertBefore(spacer, nav);
+
+  function update() {
+    if (!desktop.matches) {
+      nav.classList.remove('is-sticky');
+      spacer.style.height = '0px';
+      return;
+    }
+
+    var anchor = nav.classList.contains('is-sticky') ? spacer : nav;
+    var top = anchor.getBoundingClientRect().top + window.pageYOffset;
+    var fixed = window.pageYOffset > top;
+    spacer.style.height = fixed ? nav.offsetHeight + 'px' : '0px';
+    nav.classList.toggle('is-sticky', fixed);
+  }
+
+  var pending = false;
+  window.addEventListener('scroll', function () {
+    if (!pending) {
+      pending = true;
+      window.requestAnimationFrame(function () {
+        pending = false;
+        update();
+      });
+    }
+  }, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+}());
