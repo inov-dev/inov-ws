@@ -299,3 +299,10 @@ header[role="banner"] .mssante-menu-item.is-open .mssante-menu-tooltip {
     display: block;
   }
 }
+
+/* Display the supplied INOV mark at a readable size in the site header. */
+header[role="banner"] .logo .dw-media {
+	width: 160px;
+	max-width: 100%;
+	height: auto;
+}
