@@ -412,3 +412,9 @@ header[role="banner"] .logo .dw-media {
     font-size: 1.45rem;
   }
 }
+
+main .dw-fake-address a[href^="mailto:"] {
+	max-width: 100%;
+	overflow-wrap: anywhere;
+	white-space: normal;
+}
