@@ -300,6 +300,13 @@ header[role="banner"] .mssante-menu-item.is-open .mssante-menu-tooltip {
   }
 }
 
+/* Display the supplied INOV mark at a readable size in the site header. */
+header[role="banner"] .logo .dw-media {
+	width: 160px;
+	max-width: 100%;
+	height: auto;
+}
+
 /* Keep the primary navigation readable and in the page flow on phones. */
 @media screen and (max-width: 767px) {
   header[role="banner"] .design-varea-top-nav {
